@@ -15,6 +15,10 @@ If run successfully, you will be asked to do a few manual things I haven't got t
 
 ## Running
 
+Make sure you are in the right virtualenv with
+
+    mkvirtualenv keras
+
 Add the text to be learned to data/data.txt and then run
 
     make generate
