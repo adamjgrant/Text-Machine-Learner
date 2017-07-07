@@ -27,13 +27,22 @@ steptwo:
 	@echo Linking OpenCV
 	@cd ~/.virtualenvs/cv/lib/python2.7/site-packages/ && ln -s /usr/local/lib/python2.7/site-packages/cv2.so cv2.so
 	@echo Exiting virtualenv
-	@deactivate
-	@mkvirtualenv keras && pip install numpy scipy scikit-learn pillow h5py && pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git && pip install keras && cd ~/.virtualenvs/keras/lib/python2.7/site-packages/ && ln -s /usr/local/lib/python2.7/site-packages/cv2.so cv2.so 
+	@echo Run the following commands
+	@echo =========================================
+	@echo deactivate
+	@echo mkvirtualenv keras
+	@echo =========================================
+	@echo When you have finished, run make stepthree
+
+stepthree:
+	@pip install numpy scipy scikit-learn pillow h5py && pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git && pip install keras && cd ~/.virtualenvs/keras/lib/python2.7/site-packages/ && ln -s /usr/local/lib/python2.7/site-packages/cv2.so cv2.so 
 	@echo Open ~/.keras/keras.json and replace 'tensorflow' with 'theanos'
 	@echo =========================================
 	@echo When you have finished, run make generate to run the AI
 
 generate:
+	@echo This must be run from your virtual env.
+	@echo If this does not work, make sure you run mkvirtualenv keras first
 	@echo Running AI from data in ./data/data.txt.
 	@echo You can close this SSH session and the process will continue.
 	@echo Output will be saved to nohup.out in the current directory.

@@ -11,11 +11,7 @@ Once you have your environment all squared away just run
 
     make
 
-You'll be asked to make a change to your `~/.bashrc` and then run
-
-    make steptwo
-
-...when the first part run successfully. You'll then need to make a quick change to ~/.keras/keras.json (The script will prompt you)
+If run successfully, you will be asked to do a few manual things I haven't got the script to do on its own just yet, then run other steps. Just follow instructions as prompted.
 
 ## Running
 
