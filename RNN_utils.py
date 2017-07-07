@@ -1,5 +1,4 @@
-
-m __future__ import print_function
+from __future__ import print_function
 import numpy as np
 
 # method for generating text
