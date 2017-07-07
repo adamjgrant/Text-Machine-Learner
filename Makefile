@@ -19,6 +19,7 @@ steptwo:
 	@sudo apt-get install python2.7-dev
 	@echo Installing numpy
 	@pip install numpy
+	@pip install matplotlib
 	@echo Cloning OpenCV Source Code
 	@cd ~ && git clone https://github.com/Itseez/opencv.git && cd opencv && git checkout 3.0.0 && cd ~ && git clone https://github.com/Itseez/opencv_contrib.git && cd opencv_contrib && git checkout 3.0.0
 	@echo Compiling and installing OpenCV...
